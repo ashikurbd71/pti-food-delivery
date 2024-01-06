@@ -75,9 +75,13 @@ useEffect(() => {
         food?.Items?.map(food =>
 
             <SwiperSlide key={food.imageUrl}>
+
+
         <div className='py-5'>
- <img src={food?.ImageUrl} alt="foodiamage" className='lg:h-[330px] h-[200px] lg:w-[300px] rounded-lg' />
+
+   <img src={food?.ImageUrl} alt="foodiamage" className='lg:h-[330px] h-[200px] lg:w-[300px] rounded-lg' />
    <h1 className='text-center py-2 lg:text-lg'>{food?.Name}</h1>
+   
         </div> 
 
 
