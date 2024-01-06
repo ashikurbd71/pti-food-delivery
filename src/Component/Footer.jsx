@@ -29,7 +29,7 @@ const Footer = () => {
         />
        <button
           type="submit"
-          className="text-white absolute   right-2.5 bottom-1 bg-[#FC6011]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="lg:text-white absolute   right-2.5 bottom-1 lg:bg-[#FC6011] text-[#FC6011]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
               <div className='flex items-center gap-3'>
                 <h1>Subscribe</h1>
@@ -47,7 +47,7 @@ const Footer = () => {
          
          <div>
               {/* logo */}
-    <h1 className='lg:text-3xl text-xl font-bold text-center lg:text-left mb-5'>pti.</h1>
+    <h1 className='lg:text-3xl text-2xl font-bold text-center lg:text-left mb-5'>pti.</h1>
              <p className='font-semibold text-center lg:text-left'>Copyright&copy;Tripp.AllRight Reserved</p>
          </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { FaRegUser } from "react-icons/fa6";
 const Navber = () => {
     return (
-        <div className='flex lg:justify-between justify-center lg:flex-row lg:gap-10 gap-10  my-4'>
+        <div className='flex md:justify-between lg:justify-between justify-center md:flex-row lg:flex-row lg:gap-10 gap-10  my-4'>
             {/* logo */}
             <div>
 
@@ -72,7 +72,7 @@ const Navber = () => {
 
 {/* user icon */}
 
-  <div className='hidden lg:block'>
+  <div className='hidden md:block lg:block'>
   <FaRegUser  className='text-4xl rou rounded-full text-white p-2  bg-[#FD6011]' />
   </div>
 
