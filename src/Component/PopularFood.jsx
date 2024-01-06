@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { FreeMode, Pagination } from 'swiper/modules';
+import AddFood from '../Modal/AddFood';
 
 
 
@@ -20,6 +21,15 @@ import { FreeMode, Pagination } from 'swiper/modules';
 
 
 const PopularFood = () => {
+
+
+    const[isOpen,setIsOpen] = useState(false)
+
+    const closeModal = () => {
+    
+        setIsOpen(false)
+    }
+
 
 //   api call and data fetch
 
@@ -51,7 +61,7 @@ useEffect(() => {
 
       <div className='flex justify-between  items-center'>
         <h1 className='lg:text-2xl text-xl font-semibold '>Popular</h1>
-        <h1 className='lg:text-xl text-lg font-semibold text-[#FD6011]'>Add More</h1>
+        <h1  onClick={()=> setIsOpen(true)} className='lg:text-xl text-lg cursor-pointer font-semibold text-[#FD6011] '>Add More</h1>
       </div>
 
 
@@ -81,7 +91,7 @@ useEffect(() => {
 
    <img src={food?.ImageUrl} alt="foodiamage" className='lg:h-[330px] h-[200px] lg:w-[300px] rounded-lg' />
    <h1 className='text-center py-2 lg:text-lg'>{food?.Name}</h1>
-   
+
         </div> 
 
 
@@ -100,7 +110,7 @@ useEffect(() => {
         </div>
 
 
-
+ <AddFood  closeModal={closeModal}  isOpen={isOpen}/>
 </>
     );
 };

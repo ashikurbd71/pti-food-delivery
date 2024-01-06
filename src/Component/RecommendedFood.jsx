@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { FreeMode, Pagination } from 'swiper/modules';
+import AddFood from '../Modal/AddFood';
 
 
 
@@ -20,6 +21,14 @@ import { FreeMode, Pagination } from 'swiper/modules';
 
 
 const RecommendedFood = () => {
+
+    const[isOpen,setIsOpen] = useState(false)
+
+    const closeModal = () => {
+    
+        setIsOpen(false)
+    }
+
 
 //   api call and data fetch
 
@@ -41,13 +50,13 @@ useEffect(() => {
 
 
     return (
-       
+       <>
               <div className='pb-10' >
             <Container>
 
       <div className='flex justify-between  items-center'>
         <h1 className='lg:text-2xl text-xl font-semibold '>Recommended</h1>
-        <h1 className='lg:text-xl text-lg font-semibold text-[#FD6011]'>Add More</h1>
+        <h1 onClick={()=> setIsOpen(true)} className='lg:text-xl cursor-pointer text-lg font-semibold text-[#FD6011]'>Add More</h1>
       </div>
 
 
@@ -93,8 +102,12 @@ useEffect(() => {
 
             </Container>
         </div>
-        
+
+        <AddFood closeModal={closeModal}  isOpen={isOpen}/>
+        </> 
     );
+
+   
 };
 
 export default RecommendedFood;
