@@ -22,6 +22,7 @@ import AddFood from '../Modal/AddFood';
 
 const PopularFood = () => {
 
+    // modal
 
     const[isOpen,setIsOpen] = useState(false)
 
@@ -65,7 +66,7 @@ useEffect(() => {
       </div>
 
 
-
+{/* slider */}
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -80,7 +81,9 @@ useEffect(() => {
        
 
   <div className=''>
+
     {/* data map */}
+
     {
         food?.Items?.map(food =>
 

@@ -22,6 +22,8 @@ import AddFood from '../Modal/AddFood';
 
 const RecommendedFood = () => {
 
+    // modal
+
     const[isOpen,setIsOpen] = useState(false)
 
     const closeModal = () => {
@@ -60,6 +62,8 @@ useEffect(() => {
       </div>
 
 
+{/* slider */}
+
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -74,7 +78,9 @@ useEffect(() => {
        
 
   <div className=''>
+
     {/* data map */}
+    
     {
         food?.Items?.map(food =>
 

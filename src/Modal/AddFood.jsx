@@ -14,28 +14,28 @@ const AddFood = ({isOpen,closeModal}) => {
         const imagefile = {image : data?.image[0]}
   
         console.table(imagefile)
-        const res = await axios.post(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_API_KEY}`,imagefile,{
+        // const res = await axios.post(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_API_KEY}`,imagefile,{
 
-        headers: {
-            'content-type': 'multipart/form-data'
-        }
-        })
-      console.log(res)
+        // headers: {
+        //     'content-type': 'multipart/form-data'
+        // }
+        // })
+     
       
-    //  statement
 
-      if (res.data.success) {
-          // now send the menu item data to the server with the image url
+
           const campInfo = {
              
-              image: res.data.data.display_url,
+              image: imagefile,
+              foodname : data.price,
+              price : data.food,
        
              
           }
           // 
           console.log(campInfo)
         
-      }}
+      }
       
 
 
@@ -43,7 +43,7 @@ const AddFood = ({isOpen,closeModal}) => {
     return (
         <div>
              <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as='div' className='relative z-10 bg-[#EDF2F4]' onClose={closeModal}>
+      <Dialog as='div' className='relative z-10 bg-gray-900' onClose={closeModal}>
         <Transition.Child
           as={Fragment}
           enter='ease-out duration-300'
@@ -53,7 +53,7 @@ const AddFood = ({isOpen,closeModal}) => {
           leaveFrom='opacity-100'
           leaveTo='opacity-0'
         >
-          <div className='fixed inset-0 bg-[#EDF2F4] bg-opacity-25' />
+          <div className='fixed inset-0 bg-gray-900 bg-opacity-25' />
         </Transition.Child>
 
         <div className='fixed inset-0 overflow-y-auto'>
@@ -67,10 +67,10 @@ const AddFood = ({isOpen,closeModal}) => {
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-95'
             >
-              <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-[#EDF2F4] mt-20 p-6 text-left align-middle shadow-xl transition-all'>
+              <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-gray-500 mt-20 p-6 text-left align-middle shadow-xl transition-all'>
                 <Dialog.Title
                   as='h3'
-                  className='text-xl font-medium text-center   leading-6 text-[#F99F1C]'
+                  className='text-2xl font-medium text-center   leading-6 text-[#F99F1C]'
                 >
                 Add Food
                 
@@ -109,6 +109,7 @@ const AddFood = ({isOpen,closeModal}) => {
                {...register('food', { required: true })}
                 className="w-full rounded-lg border-gray-200 p-3 text-sm"
                 placeholder="Food Name"
+                name='food'
                 type="text"
              
               />
@@ -121,6 +122,7 @@ const AddFood = ({isOpen,closeModal}) => {
                {...register('price', { required: true })}
                 className="w-full rounded-lg border-gray-200 p-3 text-sm"
                 placeholder="Price"
+                name='price'
                 type="text"
           
               />
