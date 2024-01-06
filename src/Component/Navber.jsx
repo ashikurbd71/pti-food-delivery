@@ -2,11 +2,11 @@ import React from 'react';
 import { FaRegUser } from "react-icons/fa6";
 const Navber = () => {
     return (
-        <div className='flex lg:justify-between justify-center lg:flex-row gap-10 my-4'>
+        <div className='flex lg:justify-between justify-center lg:flex-row lg:gap-10 gap-10  my-4'>
             {/* logo */}
             <div>
 
-                <h1 className='text-3xl font-bold '>pti.</h1>
+                <h1 className='lg:text-3xl text-xl font-bold '>pti.</h1>
 
             </div>
 
@@ -34,7 +34,7 @@ const Navber = () => {
         <input
           type="search"
           id="default-search"
-          className="block p-2 pl-10 lg:w-[400px] text-sm  rounded-lg "
+          className="block p-2 pl-10 lg:w-[400px] w-[180px] text-sm  rounded-lg "
           placeholder="Search AudioBook"
           required
         />
@@ -51,15 +51,15 @@ const Navber = () => {
   <select
     name="HeadlineAct"
     id="HeadlineAct"
-    className="block p-2 rounded-lg  text-sm font-semibold bg-none"
+    className="block p-2 rounded-lg lg:w-full w-[100px]  text-sm font-semibold bg-none"
   >
-    <option className=' fon font-semibold py-4 hover:text-[#FD6011]' value=""><h1>MENU</h1></option>
-    <option  className=' fon font-semibold hover:text-[#FD6011]' value="Home">Home</option>
-    <option  className=' fon font-semibold hover:text-[#FD6011]' value="Details">Details</option>
-    <option  className=' fon font-semibold hover:text-[#FD6011]' value="Category">Category</option>
-    <option  className=' fon font-semibold hover:text-[#FD6011]' value="My Favorites">My Favorites</option>
-    <option  className=' fon font-semibold hover:text-[#FD6011]' value="Profile">Profile</option>
-    <option  className=' fon font-semibold hover:text-[#FD6011]' value="Log in/Sign Up">Log in/Sign Up</option>
+    <option className=' font-semibold p hover:text-[#FD6011]' value=""><h1>MENU</h1></option>
+    <option  className='  font-medium hover:text-[#FD6011]' value="Home">Home</option>
+    <option  className=' font-medium hover:text-[#FD6011]' value="Details">Details</option>
+    <option  className=' font-medium hover:text-[#FD6011]' value="Category">Category</option>
+    <option  className=' font-medium hover:text-[#FD6011]' value="My Favorites">My Favorites</option>
+    <option  className=' font-medium hover:text-[#FD6011]' value="Profile">Profile</option>
+    <option  className=' font-medium hover:text-[#FD6011]' value="Log in/Sign Up">Log in/Sign Up</option>
  
   </select>
 </div>
